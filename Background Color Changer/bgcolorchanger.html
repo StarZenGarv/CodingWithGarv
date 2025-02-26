@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+            border-radius: 5px;
+            
+        }
+        .boxes{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 5rem;
+            height: 15rem;
+            width: 70rem;
+            gap: 1rem;
+            
+        }
+        #grey{
+            background-color: grey;
+            height: 100%;
+            width: 100%;
+            border: 4px solid greenyellow;
+        }
+        #yellow{
+            background-color: yellow;
+            height: 100%;
+            width: 100%;
+            border: 4px solid greenyellow;
+        }
+        #black{
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            border: 4px solid greenyellow;
+        }
+        #purple{
+            background-color: purple;
+            height: 100%;
+            width: 100%;
+            border: 4px solid greenyellow;
+        }
+        #white{
+            background-color: white;
+            height: 100%;
+            width: 100%;
+            border: 4px solid greenyellow;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Background Color Changer</h1>
+    <div class="boxes">
+        <div class="box" id="grey"></div>
+        <div class="box" id="yellow"></div>
+        <div class="box" id="black"></div>
+        <div class="box" id="purple"></div>
+        <div class="box" id="white"></div>
+    </div>
+    <script>
+        document.querySelectorAll('.boxes').forEach(function(box) {
+            box.addEventListener('click',function(e){
+                if(e.target.id==='grey'){
+                    document.querySelector('body').bgColor=e.target.id;
+                }
+                if(e.target.id==='yellow'){
+                    document.querySelector('body').bgColor=e.target.id;
+                }
+                if(e.target.id==='black'){
+                    document.querySelector('body').bgColor=e.target.id;
+                }
+                if(e.target.id==='purple'){
+                    document.querySelector('body').bgColor=e.target.id;
+                }
+                if(e.target.id==='white'){
+                    document.querySelector('body').bgColor=e.target.id;
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
