@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'General Sans', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .elem {
+            position: relative;
+            font-size: 2.5vw;
+            width: 30vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .elem h1 {
+            z-index: 1;
+            color: white;
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .elem:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .elem:hover h1 {
+            color: #ff5c8d;
+        }
+
+        img {
+            position: absolute;
+            border-radius: 1rem;
+            width: 15rem;
+            height: 15rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="elem">
+            <h1>LUCID MOTORS</h1>
+            <img src="https://cynthiaugwu.com/images/cover/lucid-motors.webp" alt="">
+        </div>
+        <div class="elem">
+            <h1>BARON CAPITAL</h1>
+            <img src="https://cynthiaugwu.com/images/cover/baron-capital.webp" alt="">
+        </div>
+        <div class="elem">
+            <h1>NFL</h1>
+            <img src="https://cynthiaugwu.com/images/cover/nfl.webp" alt="">
+        </div>
+        <div class="elem">
+            <h1>PLACENEW</h1>
+            <img src="https://cynthiaugwu.com/images/cover/placenew.webp" alt="">
+        </div>
+        <div class="elem">
+            <h1>SOMOS</h1>
+            <img src="https://cynthiaugwu.com/images/cover/somos.webp" alt="">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
